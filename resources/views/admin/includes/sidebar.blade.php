@@ -36,14 +36,14 @@
                 <a href="{{ route('topup') }}"><i class="fa fa-hospital-o"></i><span>Toll Up Smart Card</span>
                 </a>
             </li>
-            <li>
-                <a href="#"><i class="fa fa-hospital-o"></i><span>Toll Plaza Master</span>
+            <li class="@if(Request::is('admin/toll_plaza')) active  @endif">
+                <a href="{{ route('toll_plaza') }}"><i class="fa fa-hospital-o"></i><span>Toll Plaza Master</span>
                 </a>
             </li>
         </li>
 
-        <li class="treeview">
-            <a href="#">
+        <li class="@if(Request::is('admin/profile')) active  @endif">
+            <a href="{{ route('adminProfileEdit') }}">
                 <i class="fa fa-user-circle"></i><span> My Profile</span>
             </a>
         </li>                

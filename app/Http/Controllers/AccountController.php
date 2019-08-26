@@ -81,7 +81,7 @@ class AccountController extends Controller
 	public function postRegister(Request $request){
 
 		$validator = Validator::make($request->all(), [
-			'email' => 'required',
+			'email' => 'required|unique:users',
 			'password' => 'required',
 			'full_name' => 'required',
 			'phone_number' => 'required',

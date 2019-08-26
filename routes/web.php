@@ -61,6 +61,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
 
 	Route::post('topup_amount', 'TopUpController@topupAmount')->name('topup_amount');
 
+	Route::get('toll_plaza', 'TollPlazaMasterController@index')->name('toll_plaza');
+
+	Route::post('toll_plaza_store', 'TollPlazaMasterController@storePrices')->name('storePrices');
+	Route::post('toll_plaza_update', 'TollPlazaMasterController@updatePrices')->name('updatePrices');
+
+	Route::get('profile', 'PasswordController@adminProfileEdit')->name('adminProfileEdit');
+
+	Route::post('resetpasswordcomplete', 'PasswordController@adminUpdate')->name('admin.reset.password.complete');
+
 });
 
 
@@ -71,4 +80,6 @@ Route::group(['prefix' => 'user', 'middleware' => 'user'], function(){
 	Route::get('spending_history', 'UserController@spending_history')->name('spending_history');
 
 	Route::get('profile', 'PasswordController@userProfileEdit')->name('userProfileEdit');
+
+	Route::post('resetpasswordcomplete', 'PasswordController@userUpdate')->name('user.reset.password.complete');
 });

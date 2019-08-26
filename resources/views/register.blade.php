@@ -84,7 +84,10 @@
                             <div class="form-group col-lg-4">
                                 <label>Vehicle Type</label>
                                 <select class="form-control" name="vehicle_type">
-
+                                    <option value="">Select Vehicle Type</option>
+                                    <option value="lorry">Lorry</option>
+                                    <option value="car">Car</option>
+                                    <option value="bus">Bus</option>
                                 </select>
                             </div>
                         </div>

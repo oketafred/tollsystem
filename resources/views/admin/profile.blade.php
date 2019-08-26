@@ -1,6 +1,6 @@
-@extends('users.master')
+@extends('admin.master')
 
-@section('title', 'User Profile')
+@section('title', 'Admin Profile')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
@@ -101,7 +101,7 @@
 						<div class="col-sm-12">
 							<h3 class="m-t-0"><i class="fa fa-lock"></i> Change Password</h3>
 							<div class="review-block-title">
-								<form action="{{ route('user.reset.password.complete') }}" method="POST">
+								<form action="{{ route('admin.reset.password.complete') }}" method="POST">
 
 									{{ csrf_field() }}
 									<div class="form-group">
